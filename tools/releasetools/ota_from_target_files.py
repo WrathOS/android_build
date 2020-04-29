@@ -965,6 +965,21 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   # Dump fingerprints
   script.Print("Target: {}".format(target_info.fingerprint))
 
+  wrath_version = target_info.GetBuildProp("ro.modversion")
+  android_version = target_info.GetBuildProp("ro.build.version.release")
+  build_id = target_info.GetBuildProp("ro.build.id")
+  security_patch = target_info.GetBuildProp("ro.build.version.security_patch")
+  device = target_info.GetBuildProp("ro.wrath.device")
+  edition = target_info.GetBuildProp("ro.wrath.edition")
+
+  script.Print(" WrathOS version: WrathOS-%s"%(wrath_version));
+  script.Print(" Android version: %s"%(android_version));
+  script.Print(" Build id: %s"%(build_id));
+  script.Print(" Security patch: %s"%(security_patch));
+  script.Print(" Device: %s"%(device));
+  script.Print(" WrathOS Edition: %s"%(edition));
+  script.Print("--------------------------------------------");
+
   device_specific.FullOTA_InstallBegin()
 
   CopyInstallTools(output_zip)
