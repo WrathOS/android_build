@@ -1015,6 +1015,15 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   device = target_info.GetBuildProp("ro.wrath.device")
   edition = target_info.GetBuildProp("ro.wrath.edition")
 
+  script.Print("--------------------------------------------");
+  script.Print("       _    _______  ___ _____ _   _        ");
+  script.Print("      | |  | | ___ \/ _ \_   _| | | |       ");
+  script.Print("      | |  | | |_/ / /_\ \| | | |_| |       ");
+  script.Print("      | |/\| |    /|  _  || | |  _  |       ");
+  script.Print("      \  /\  / |\ \| | | || | | | | |       ");
+  script.Print("       \/  \/\_| \_\_| |_/\_/ \_| |_/       ");
+  script.Print("                                            ")
+  script.Print("--------------------------------------------");
   script.Print(" WrathOS version: WrathOS-%s"%(wrath_version));
   script.Print(" Android version: %s"%(android_version));
   script.Print(" Build id: %s"%(build_id));
